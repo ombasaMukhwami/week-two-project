@@ -94,20 +94,27 @@ function getGender() {
 function getChildName() {
     var dayOfWeek = getDateOfBirthAndCalculateDayOfTheWeek();
     var gender = getGender().toLowerCase();
+    var element = document.getElementById('txtResult');
+    let result = "";
+ 
    
     if (dayOfWeek != null && dayOfWeek != -1) {
         let dayIndex = parseInt(dayOfWeek);
         switch(gender) {
             case 'male':
-                return MALE_NAMES[dayIndex];
+                result = MALE_NAMES[dayIndex];
+                break;
             case 'female':
-                return FEMALE_NAMES[dayIndex];
+                result= FEMALE_NAMES[dayIndex];
+                break;
             default:
-                return "Not applicable";
+                result= "Not applicable";
       
         }
     }
-
+    element.className= 'btn btn-success';
+    element.innerText=result;
 }
+
 
 
