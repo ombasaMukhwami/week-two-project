@@ -81,4 +81,31 @@ function getDateOfBirthAndCalculateDayOfTheWeek() {
     return result;
 }
 
+function getGender() {
+    var userInput = prompt("Please enter the gender");
+    if (userInput == null || userInput.length === 0) {
+        validate("invalid gender, you did not give your input");
+        return "";
+    }
 
+  return userInput;
+}
+
+function getChildName() {
+    var dayOfWeek = getDateOfBirthAndCalculateDayOfTheWeek();
+    var gender = getGender().toLowerCase();
+   
+    if (dayOfWeek != null && dayOfWeek != -1) {
+        let dayIndex = parseInt(dayOfWeek);
+        switch(gender) {
+            case 'male':
+                return MALE_NAMES[dayIndex];
+            case 'female':
+                return FEMALE_NAMES[dayIndex];
+            default:
+                return "Not applicable";
+      
+        }
+    }
+
+}
