@@ -113,7 +113,7 @@ function getChildName() {
         }
     }
     element.className= 'btn btn-success';
-    element.innerText=result;
+    element.innerText= `Your child's name is : ${result}`;
 }
 
 
