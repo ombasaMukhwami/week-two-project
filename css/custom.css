@@ -1,9 +1,10 @@
 body {
-  padding: auto;
-  margin-top: 100px;
-  margin-left: 100px;
-  padding: top 100px;
-  border-top: 120px;
+  background-color: #9b59b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  margin: 0%;
 }
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
 .row.content {height: 1500px;}
